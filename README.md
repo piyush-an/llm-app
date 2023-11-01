@@ -150,7 +150,7 @@ You can install and run the LLM App in two different ways.
 Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Here is how to use Docker to build and run the LLM App:
 
 ```bash
-docker compose run --build --rm -p 8080:8080 llm-app-examples
+docker compose up --build
 ```
 
 If you have set a different port in `PATHWAY_REST_CONNECTOR_PORT`, replace the second `8080` with this port in the command above.
@@ -215,6 +215,8 @@ When the process is complete, the App will be up and running inside a Docker con
 
 ### Step 5: Launch the User Interface:
 Go to the `examples/ui/` directory (or `examples/pipelines/unstructured/ui` if you are running the unstructured version.) and execute `streamlit run server.py`. Then, access the URL displayed in the terminal to engage with the LLM App using a chat interface.
+
+Or if using docker compose the ui is already accessible on port 8501
 
 ### Bonus: Build your own Pathway-powered LLM App
 
